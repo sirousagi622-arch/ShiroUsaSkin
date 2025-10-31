@@ -253,7 +253,7 @@ h3 {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列レイアウト */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -397,6 +397,11 @@ footer {
     .product-grid {
         grid-template-columns: 1fr; /* 1列レイアウトに変更 */
     }
+
+    .product-image img {
+    height: 300px;
+}
+
 }
 
 @media (max-width: 1100px) {

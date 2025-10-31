@@ -1,0 +1,425 @@
+/*
+ * ShiroUsaSkin Web Site CSS
+ * - 白を基調としたクリーンで純粋なデザイン
+ * - ブランドカラー: White (メイン), Light Gray, Rabbit Pink/Light Blue (アクセント)
+ */
+
+/* 1. リセットと基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Antique', serif; 
+    line-height: 1.8; 
+    color: #333;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 2. ヘッダーとナビゲーション */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000; /* ロゴははっきりと */
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #cceeff; /* 薄い青をアクセントに */
+}
+
+/* 3. 共通セクションスタイル */
+.section-padding {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+h3 {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* 4. ボタンとリンク */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #007bff; /* メインアクションカラー */
+    color: #fff;
+    border-color: #007bff;
+}
+
+.primary-button:hover {
+    background-color: #0056b3;
+}
+
+.secondary-button {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.secondary-button:hover {
+    background-color: #f7f7f7;
+    border-color: #aaa;
+}
+
+.link-text {
+    display: block;
+    margin-top: 30px;
+    font-weight: 500;
+    color: #007bff;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+/* 5. ヒーローセクション */
+.hero {
+    background-color: #fff;
+    background-image: url(images/hero.png);
+    background-position: center top; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 90vh; 
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    
+    padding: 50px 5%; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+
+.hero-content {
+    max-width: 450px; 
+    padding: 20px;
+    
+    /* 背景のぼかし効果 */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8); 
+}
+
+.hero-content {
+  animation-name: zoomin_anime;
+  animation-fill-mode: both;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+ 
+@keyframes zoomin_anime {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+/* 6. コンセプトセクション */
+.concept-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.concept-text {
+    flex: 1;
+}
+
+.concept-text p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.concept-image {
+    flex: 1;
+}
+
+.concept-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 7. ラインナップセクション */
+.light-background {
+    background-color: #fcfcfc;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列レイアウト */
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* プレースホルダーの背景色 */
+}
+
+.product-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+    height: 40px; /* 説明文の高さを揃える */
+}
+
+/* 8. FAQセクション */
+.faq-list {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.faq-list dt {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    border-left: 5px solid #cceeff; /* 薄い青をアクセントに */
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.faq-list dd {
+    font-size: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* 9. フッター */
+footer {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links ul li a {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-links ul li a:hover {
+    color: #cceeff;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #999;
+}
+
+/* レスポンシブ対応 (簡易版) */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+    }
+    header nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header nav ul li {
+        margin: 0 10px;
+    }
+    
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .concept-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* 1列レイアウトに変更 */
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .hero {
+        background-image: url(images/hero.png);
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        background-image: url(images/hero2.png);
+        background-size: contain;
+        height: 50vh;
+    }
+
+    .hero-content {
+        display: none; 
+    }
+
+}
